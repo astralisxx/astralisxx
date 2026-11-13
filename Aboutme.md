@@ -45,7 +45,7 @@ Cool-down experiments and conjugate CFD of the finned housings give the wall hea
 </tr>
 </table>
 
-The source code of these projects is private. Each link opens a showcase page with video.
+The source code of these projects is private.
 
 ### Research
 
