@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="560" viewBox="0 0 1600 560" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" role="img" aria-labelledby="ttl dsc">
+  <title id="ttl">Project pipeline</title>
+  <desc id="dsc">Test-rig experiments feed a check-valve model and a wall heat-transfer condition, each built from tests plus CFD. Both feed a thermodynamic compressor model and a cylinder CFD model, which cross-check each other and are validated against rig pressure and flow. The thermodynamic model is ported to Python, parity-tested, and becomes a booster simulator with inverse design.</desc>
+  <style>
+    .bg { fill: #ffffff; }
+    .card { fill: #ffffff; stroke: #d8dee4; stroke-width: 1.5; }
+    .panel { fill: #f6f8fa; stroke: #d8dee4; stroke-width: 1.5; }
+    .sep { stroke: #d8dee4; stroke-width: 1.5; }
+    .t { fill: #1f2328; font-size: 24px; font-weight: 600; }
+    .s { fill: #57606a; font-size: 20px; }
+    .cap { fill: #1f2328; font-size: 20px; font-weight: 600; letter-spacing: 2px; }
+    .lbl { fill: #57606a; font-size: 20px; }
+    .tag { fill: #ffffff; stroke: #d8dee4; stroke-width: 1.5; }
+    .tagt { fill: #57606a; font-size: 19px; font-weight: 600; letter-spacing: 1px; }
+    .track { fill: none; stroke: url(#jet); stroke-width: 3; opacity: 0.22; }
+    .flow { fill: none; stroke: url(#jet); stroke-width: 3; stroke-linecap: round;
+            stroke-dasharray: 10 14; animation: flow 3s linear infinite; }
+    .head { fill: url(#jet); }
+    .port { fill: #ffffff; stroke: url(#jet); stroke-width: 2.5; }
+    .halo { fill: none; stroke: url(#jet); stroke-width: 2; opacity: 0.10;
+            animation: halo 3s ease-in-out infinite; }
+    .shadow { flood-color: #1f2328; flood-opacity: 0.08; }
+    .j0 { stop-color: #1340c9; }
+    .j1 { stop-color: #1673e0; }
+    .j2 { stop-color: #1898c4; }
+    .j3 { stop-color: #1aa88a; }
+    .j4 { stop-color: #3fae4f; }
+    .j5 { stop-color: #95b021; }
+    .j6 { stop-color: #d9971a; }
+    .j7 { stop-color: #d4501c; }
+    @keyframes flow { to { stroke-dashoffset: -96; } }
+    @keyframes halo { 50% { opacity: 0.45; } }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  </style>
+  <defs>
+    <linearGradient id="jet" gradientUnits="userSpaceOnUse" x1="288" y1="0" x2="1276" y2="0">
+      <stop class="j0" offset="0"/>
+      <stop class="j1" offset="0.15"/>
+      <stop class="j2" offset="0.3"/>
+      <stop class="j3" offset="0.45"/>
+      <stop class="j4" offset="0.6"/>
+      <stop class="j5" offset="0.72"/>
+      <stop class="j6" offset="0.84"/>
+      <stop class="j7" offset="1"/>
+    </linearGradient>
+    <filter id="sh" x="-10%" y="-15%" width="120%" height="140%">
+      <feDropShadow class="shadow" dx="0" dy="2" stdDeviation="5"/>
+    </filter>
+  </defs>
+
+  <rect class="bg" width="1600" height="560"/>
+
+  <g id="captions">
+    <text class="cap" x="32" y="40">TEST RIG</text>
+    <text class="cap" x="384" y="40">CHARACTERISATION</text>
+    <text class="cap" x="776" y="40">COMPRESSOR MODELS</text>
+    <text class="cap" x="1276" y="40">SIMULATOR</text>
+  </g>
+
+  <g id="nodes">
+    <rect class="panel" x="776" y="62" width="372" height="318" rx="20"/>
+    <rect class="card" x="32" y="62" width="256" height="468" rx="14" filter="url(#sh)"/>
+    <path class="sep" d="M56 216H264"/>
+    <path class="sep" d="M56 384H264"/>
+    <text class="t" x="56" y="126">Valve flow tests</text>
+    <text class="s" x="56" y="156">check valves</text>
+    <text class="t" x="56" y="294">Cool-down tests</text>
+    <text class="s" x="56" y="324">compressor housing</text>
+    <text class="t" x="56" y="462">Pressure &amp; flow</text>
+    <text class="s" x="56" y="492">in-cylinder · delivered</text>
+    <rect class="card" x="384" y="80" width="300" height="104" rx="14" filter="url(#sh)"/>
+    <text class="t" x="408" y="126">Valve model</text>
+    <text class="s" x="408" y="156">lift · effective area</text>
+    <rect class="tag" x="598" y="65" width="62" height="30" rx="15"/>
+    <text class="tagt" x="629" y="86" text-anchor="middle">CFD</text>
+    <rect class="card" x="384" y="248" width="300" height="104" rx="14" filter="url(#sh)"/>
+    <text class="t" x="408" y="294">Wall heat transfer</text>
+    <text class="s" x="408" y="324">wall boundary condition</text>
+    <rect class="tag" x="598" y="233" width="62" height="30" rx="15"/>
+    <text class="tagt" x="629" y="254" text-anchor="middle">CFD</text>
+    <rect class="card" x="794" y="80" width="336" height="104" rx="14" filter="url(#sh)"/>
+    <text class="t" x="818" y="126">0-D model</text>
+    <text class="s" x="818" y="156">thermodynamic · MATLAB</text>
+    <rect class="card" x="794" y="248" width="336" height="104" rx="14" filter="url(#sh)"/>
+    <text class="t" x="818" y="294">3-D cylinder CFD</text>
+    <text class="s" x="818" y="324">ANSYS Fluent</text>
+    <rect class="halo" x="1271" y="75" width="302" height="114" rx="19"/>
+    <rect class="card" x="1276" y="80" width="292" height="104" rx="14" filter="url(#sh)"/>
+    <text class="t" x="1300" y="126">Booster simulator</text>
+    <text class="s" x="1300" y="156">desktop · inverse design</text>
+  </g>
+
+  <g id="links">
+    <path class="track" d="M288 132H372"/>
+    <path class="flow" d="M288 132H372"/>
+    <path class="track" d="M288 300H372"/>
+    <path class="flow" d="M288 300H372"/>
+    <path class="track" d="M684 132C736 132 712 216 764 216"/>
+    <path class="flow" d="M684 132C736 132 712 216 764 216"/>
+    <path class="track" d="M684 300C736 300 712 216 764 216"/>
+    <path class="flow" d="M684 300C736 300 712 216 764 216"/>
+    <path class="track" d="M288 468H938Q962 468 962 444V392"/>
+    <path class="flow" d="M288 468H938Q962 468 962 444V392"/>
+    <path class="track" d="M954 184V236"/>
+    <path class="flow" d="M954 184V236"/>
+    <path class="track" d="M970 248V196"/>
+    <path class="flow" d="M970 248V196"/>
+    <path class="track" d="M1130 132H1264"/>
+    <path class="flow" d="M1130 132H1264"/>
+    <path class="head" d="M384 132l-12 -7v14z"/>
+    <path class="head" d="M384 300l-12 -7v14z"/>
+    <path class="head" d="M776 216l-12 -7v14z"/>
+    <path class="head" d="M962 380l-7 12h14z"/>
+    <path class="head" d="M954 248l-7 -12h14z"/>
+    <path class="head" d="M970 184l-7 12h14z"/>
+    <path class="head" d="M1276 132l-12 -7v14z"/>
+    <circle class="port" cx="288" cy="132" r="5"/>
+    <circle class="port" cx="288" cy="300" r="5"/>
+    <circle class="port" cx="288" cy="468" r="5"/>
+    <circle class="port" cx="684" cy="132" r="5"/>
+    <circle class="port" cx="684" cy="300" r="5"/>
+    <circle class="port" cx="1130" cy="132" r="5"/>
+    <text class="lbl" x="534" y="454" text-anchor="middle">validation</text>
+    <text class="lbl" x="984" y="223">cross-check</text>
+    <text class="lbl" x="1208" y="116" text-anchor="middle">Python port</text>
+    <text class="lbl" x="1208" y="164" text-anchor="middle">parity tests</text>
+  </g>
+
+  <g id="factory-note">
+    <style>
+      #factory-note { opacity: 0.6; }
+      #factory-note .fbox { fill: none; stroke: #57606a; stroke-width: 1.5; stroke-dasharray: 6 6; }
+      #factory-note .fline { fill: none; stroke: #57606a; stroke-width: 2; stroke-dasharray: 5 7; }
+      #factory-note .fhead { fill: #57606a; }
+    </style>
+    <rect class="fbox" x="1300" y="428" width="244" height="80" rx="12"/>
+    <text class="t" x="1324" y="462">The Factory</text>
+    <text class="s" x="1324" y="490">AI-agent tooling</text>
+    <path class="fline" d="M1422 428V196"/>
+    <path class="fhead" d="M1422 184l-7 12h14z"/>
+  </g>
+</svg>
