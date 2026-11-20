@@ -13,7 +13,7 @@ against a laboratory rig, and build the software that puts those models to work.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="media/pipeline-dark.svg">
-  <img src="media/pipeline-light.svg" alt="Project pipeline: valve flow tests and valve CFD give the valve model; housing cool-down tests and housing CFD give the wall heat-transfer condition; both feed the 0-D model and the 3-D cylinder CFD, which cross-check each other and are validated on the test rig; the 0-D model, ported to Python, runs the booster simulator" width="100%">
+  <img src="media/pipeline-light.svg" alt="Project pipeline: valve flow tests and valve CFD give the valve model; steady housing tests (value), transient cool-down tests (validity of one constant coefficient) and housing CFD give the wall heat-transfer condition; both feed the 0-D model and the 3-D cylinder CFD, which cross-check each other and are validated on the test rig; the 0-D model, ported to Python, runs the booster simulator" width="100%">
 </picture>
 
 ### Projects
@@ -65,6 +65,11 @@ Desktop app that runs command-line coding agents as a robot crew on an isometric
 <picture><source media="(prefers-color-scheme: dark)" srcset="media/cards/thumb-woven-screen-dark.png"><img src="media/cards/thumb-woven-screen.png" alt="Velocity jet through the opening of a woven wire screen" width="100%"></picture>
 <p><a href="https://github.com/astralisxx/woven-screen-cfd"><b>Woven wire screen</b></a><br>
 Resolved 3-D CFD in OpenFOAM of flow and a fast surface reaction on a fine woven screen, checked against pressure-drop and mass-transfer correlations.</p>
+</td>
+<td width="33%" valign="top">
+<picture><source media="(prefers-color-scheme: dark)" srcset="media/cards/thumb-gliding-arc-dark.png"><img src="media/cards/thumb-gliding-arc.png" alt="Jet and recirculation cells between the electrode plates of a gliding-arc reactor" width="100%"></picture>
+<p><a href="https://github.com/astralisxx/gliding-arc-cfd"><b>Gliding-arc reactor</b></a><br>
+Cold-flow 3-D CFD in OpenFOAM of a planar gliding-arc plasma reactor: how much gas bypasses the electrodes, with particle-tracking residence times.</p>
 </td>
 </tr>
 </table>

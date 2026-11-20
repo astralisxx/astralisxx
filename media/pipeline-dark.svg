@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="560" viewBox="0 0 1600 560" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" role="img" aria-labelledby="ttl dsc">
   <title id="ttl">Project pipeline</title>
-  <desc id="dsc">Test-rig experiments feed a check-valve model and a wall heat-transfer condition, each built from tests plus CFD. Both feed a thermodynamic compressor model and a cylinder CFD model, which cross-check each other and are validated against rig pressure and flow. The thermodynamic model is ported to Python, parity-tested, and becomes a booster simulator with inverse design.</desc>
+  <desc id="dsc">Test-rig experiments feed a check-valve model and a wall heat-transfer condition, each built from tests plus CFD; steady housing tests give the heat-transfer value and transient cool-down tests show that one constant coefficient is valid. Both feed a thermodynamic compressor model and a cylinder CFD model, which cross-check each other and are validated against rig pressure and flow. The thermodynamic model is ported to Python, parity-tested, and becomes a booster simulator with inverse design.</desc>
   <style>
     .bg { fill: #0d1117; }
     .card { fill: #121820; stroke: #2a3038; stroke-width: 1.5; }
@@ -64,8 +64,9 @@
     <path class="sep" d="M56 384H264"/>
     <text class="t" x="56" y="126">Valve flow tests</text>
     <text class="s" x="56" y="156">check valves</text>
-    <text class="t" x="56" y="294">Cool-down tests</text>
-    <text class="s" x="56" y="324">compressor housing</text>
+    <text class="t" x="56" y="266">Housing tests</text>
+    <text class="s" x="56" y="306">steady · U value</text>
+    <text class="s" x="56" y="342">transient · U validity</text>
     <text class="t" x="56" y="462">Pressure &amp; flow</text>
     <text class="s" x="56" y="492">in-cylinder · delivered</text>
     <rect class="card" x="384" y="80" width="300" height="104" rx="14" filter="url(#sh)"/>
@@ -93,8 +94,10 @@
   <g id="links">
     <path class="track" d="M288 132H372"/>
     <path class="flow" d="M288 132H372"/>
-    <path class="track" d="M288 300H372"/>
-    <path class="flow" d="M288 300H372"/>
+    <path class="track" d="M288 300C332 300 336 284 372 284"/>
+    <path class="flow" d="M288 300C332 300 336 284 372 284"/>
+    <path class="track" d="M288 336C332 336 336 316 372 316"/>
+    <path class="flow" d="M288 336C332 336 336 316 372 316"/>
     <path class="track" d="M684 132C736 132 712 216 764 216"/>
     <path class="flow" d="M684 132C736 132 712 216 764 216"/>
     <path class="track" d="M684 300C736 300 712 216 764 216"/>
@@ -108,7 +111,8 @@
     <path class="track" d="M1130 132H1264"/>
     <path class="flow" d="M1130 132H1264"/>
     <path class="head" d="M384 132l-12 -7v14z"/>
-    <path class="head" d="M384 300l-12 -7v14z"/>
+    <path class="head" d="M384 284l-12 -7v14z"/>
+    <path class="head" d="M384 316l-12 -7v14z"/>
     <path class="head" d="M776 216l-12 -7v14z"/>
     <path class="head" d="M962 380l-7 12h14z"/>
     <path class="head" d="M954 248l-7 -12h14z"/>
@@ -116,6 +120,7 @@
     <path class="head" d="M1276 132l-12 -7v14z"/>
     <circle class="port" cx="288" cy="132" r="5"/>
     <circle class="port" cx="288" cy="300" r="5"/>
+    <circle class="port" cx="288" cy="336" r="5"/>
     <circle class="port" cx="288" cy="468" r="5"/>
     <circle class="port" cx="684" cy="132" r="5"/>
     <circle class="port" cx="684" cy="300" r="5"/>
