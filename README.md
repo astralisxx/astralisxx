@@ -62,7 +62,7 @@ Desktop app that runs command-line coding agents as a robot crew on an isometric
 <table>
 <tr>
 <td width="50%" valign="top">
-<picture><source media="(prefers-color-scheme: dark)" srcset="media/cards/thumb-woven-screen-dark.png"><img src="media/cards/thumb-woven-screen.png" alt="Computational domain of the woven-screen CFD: one wire crossing in a periodic quarter cell with its inlet, outlet, wall and symmetry boundary conditions" width="100%"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="media/cards/thumb-woven-screen-dark.png"><img src="media/cards/thumb-woven-screen.png" alt="Velocity streamlines weaving through the wires of a woven screen in the flow channel, coloured by velocity magnitude" width="100%"></picture>
 <p><a href="https://github.com/astralisxx/woven-screen-cfd"><b>Woven wire screen</b></a><br>
 Resolved 3-D CFD in OpenFOAM of flow and a fast surface reaction on a fine woven screen, checked against pressure-drop and mass-transfer correlations.</p>
 </td>
