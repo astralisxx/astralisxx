@@ -61,12 +61,12 @@ Desktop app that runs command-line coding agents as a robot crew on an isometric
 
 <table>
 <tr>
-<td width="33%" valign="top">
-<picture><source media="(prefers-color-scheme: dark)" srcset="media/cards/thumb-woven-screen-dark.png"><img src="media/cards/thumb-woven-screen.png" alt="Velocity jet through the opening of a woven wire screen" width="100%"></picture>
+<td width="50%" valign="top">
+<picture><source media="(prefers-color-scheme: dark)" srcset="media/cards/thumb-woven-screen-dark.png"><img src="media/cards/thumb-woven-screen.png" alt="Computational domain of the woven-screen CFD: one wire crossing in a periodic quarter cell with its inlet, outlet, wall and symmetry boundary conditions" width="100%"></picture>
 <p><a href="https://github.com/astralisxx/woven-screen-cfd"><b>Woven wire screen</b></a><br>
 Resolved 3-D CFD in OpenFOAM of flow and a fast surface reaction on a fine woven screen, checked against pressure-drop and mass-transfer correlations.</p>
 </td>
-<td width="33%" valign="top">
+<td width="50%" valign="top">
 <picture><source media="(prefers-color-scheme: dark)" srcset="media/cards/thumb-gliding-arc-dark.png"><img src="media/cards/thumb-gliding-arc.png" alt="Jet and recirculation cells between the electrode plates of a gliding-arc reactor" width="100%"></picture>
 <p><a href="https://github.com/astralisxx/gliding-arc-cfd"><b>Gliding-arc reactor</b></a><br>
 Cold-flow 3-D CFD in OpenFOAM of a planar gliding-arc plasma reactor: how much gas bypasses the electrodes, with particle-tracking residence times.</p>
