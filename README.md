@@ -5,7 +5,7 @@
 
 ## Berkay Şimşek
 
-Chemical engineer (MSc, Middle East Technical University, 2026). I model high-pressure reciprocating
+Chemical engineer (Bsc METU 2023, MSc 2026). I model high-pressure reciprocating
 compressors with 3-D CFD (ANSYS Fluent) and 0-D thermodynamic models (MATLAB, Python), test them
 against a laboratory rig, and build the software that puts those models to work.
 
